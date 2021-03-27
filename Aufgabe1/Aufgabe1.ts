@@ -1,7 +1,7 @@
 namespace randomPoem {
-    let name: string [] = ["Harry", "Hermine", "Ron", "Hagrid", "Dumbledore", "Snape"];
+    let name: string [] = ["Harry ", "Hermine ", "Ron ", "Hagrid ", "Dumbledore ", "Snape "];
     let action: string [] = ["liebt", "braut", "studiert", "hasst", "zaubert", "zerstört"];
-    let object: string [] = ["Zaubertränke", "den Grimm", "Lupin", "Hogwarts", "die Karte des Rumtreibers", "Dementoren"];
+    let object: string [] = [" Zaubertränke", " den Grimm", " Lupin", " Hogwarts", " die Karte des Rumtreibers", " Dementoren"];
     let sentence: string = "";
 
     for (let index: number = 6; index <= object.length; index--) {
