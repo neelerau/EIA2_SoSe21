@@ -21,7 +21,7 @@ namespace randomPoem {
     }
     
     //In der Funktion werden die Werte zurückgegeben, Name als Präfix mit Unterstrick
-    function getVerse (_name: string[], _action: string[], _object: string[], _sentence: string ): string {
+    function getVerse (_name: string[], _action: string[], _object: string[], _sentence: string): string {
     //console.log("alohomara");
     //Math.floor, rundet die Nachkommastelle auf
     let randomName: number = Math.floor(Math.random() * _name.length); //Mit Math.random wird eine zufällioge Zahl erzeugt
