@@ -1,12 +1,12 @@
 namespace randomPoem {
 
     //Arrays mit den einzelnen Satzteilen
-    let name: string [] = ["Harry ", "Hermine ", "Ron ", "Hagrid ", "Dumbledore ", "Snape "];
-    let action: string [] = [" liebt", " braut", " studiert", " hasst", " zaubert", "zerstört"];
-    let object: string [] = [" Zaubertränke", " den Grimm", " Lupin", " Hogwarts", " die Karte des Rumtreibers", " Dementoren"];
+    let name: string [] = ["Harry", "Hermine", "Ron", "Hagrid", "Dumbledore", "Snape"];
+    let action: string [] = ["liebt", "braut", "studiert", "hasst", "zaubert", "zerstört"];
+    let object: string [] = ["Zaubertränke", "den Grimm", "Lupin", "Hogwarts", "die Karte des Rumtreibers", "Dementoren"];
     
     //leeres String, in welches die Satzteile angeordnet werden
-    let sentence: string = "";
+    let sentence: string = " ";
      
     //console.log(name[], action[], object[]);
 
@@ -25,13 +25,13 @@ namespace randomPoem {
     //console.log("alohomara");
     //Math.floor, rundet die Nachkommastelle auf
     let randomName: number = Math.floor(Math.random() * _name.length); //Mit Math.random wird eine zufällioge Zahl erzeugt
-    _sentence += _name.splice(randomName, 1) + ""; //Mit splice wird ein Wort aus dem Array gezogen und in den Satz eingefügt
+    _sentence += _name.splice(randomName, 1) + " "; //Mit splice wird ein Wort aus dem Array gezogen und in den Satz eingefügt
 
     let randomAction: number = Math.floor(Math.random() * _action.length);
-    _sentence += _action.splice(randomAction, 1) + "";
+    _sentence += _action.splice(randomAction, 1) + " ";
 
     let randomObject: number = Math.floor(Math.random() * _object.length);
-    _sentence += _object.splice(randomObject, 1) + "";
+    _sentence += _object.splice(randomObject, 1) + " ";
 
     console.log(_sentence);
     return _sentence;
