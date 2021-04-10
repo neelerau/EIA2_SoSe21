@@ -36,4 +36,4 @@ var Boxes;
         div.style.top = _y + "px";
     }
 })(Boxes || (Boxes = {}));
-//# sourceMappingURL=aufgabe2.js.map
+//# sourceMappingURL=aufgabe1.2.js.map
