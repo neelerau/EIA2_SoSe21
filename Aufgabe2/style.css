@@ -1,0 +1,52 @@
+html, body {
+    height: 100%;
+}
+body{
+    text-align: center;
+    display: grid;
+    background-image: url("background.jpg");
+    background-size: 100% !important;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 150px;
+}
+#span{
+    position: fixed;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    cursor: default;
+    border: thin solid white;
+    height: 20px;
+    width: 300px;
+    margin: 10px;
+    z-index: 100px;
+
+}
+
+#div0{
+    width: 500px;
+    height: 500px;
+    background-color: grey;
+    margin: 10px;
+}
+#div1 {
+    width: 500px;
+    height: 500px;
+    background-color: grey;
+    margin: 10px;
+
+
+}
+
+#container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -90px;
+
+}
