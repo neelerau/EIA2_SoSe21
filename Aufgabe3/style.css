@@ -1,0 +1,98 @@
+html body{
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	background-image: url("background.jpg");
+    background-size: 100% !important;
+    background-repeat: no-repeat;
+	margin: 0 auto;
+	overflow: hidden;  
+	height: 100%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+	margin-top: 100px;
+}
+
+h2{
+	text-align: center;
+	font-size: 30px;
+	color: white;	
+}
+
+
+input[type="radio"], input[type="checkbox"], label {
+	display: inline;
+}
+
+h1 {
+	grid-column: span 2;
+	text-align: center;
+	font-size: 50px;
+	color: white;
+}
+
+.formular {
+	width: 500px;
+	height: 300px;
+	text-align: center;
+	justify-content: center;
+	background-color: rgb(71, 102, 89);
+	color: white;
+}
+
+
+#memoryGame{
+	justify-content: center; 
+	text-align: center;
+}
+
+#container{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	justify-content: center; 
+	text-align: center;
+}
+
+.card{
+	height: 200px;
+  	width: 200px;
+	border-radius: 10px;
+	margin: 0px 25px 25px 0px;
+	text-align: center;
+	font-size: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.p {
+	position: absolute;
+	text-align: center;
+	justify-content: center;
+}
+
+
+.hidden{
+	background-color: grey;
+	cursor: pointer;
+}
+
+.hidden p{
+	display: none;
+}
+
+.nothidden{
+	background-color:grey;
+}
+
+.taken{
+	visibility: hidden;
+}
+
+.taken p{
+	display: none;
+}
+
+.is-hidden {
+	display: none;
+}

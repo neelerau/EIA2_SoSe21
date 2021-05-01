@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game Home</title>
+    <script src="Aufgabe3.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <section id="memoryGame">
+        <h1>Memory</h1>
+        <div id="container"></div>
+    </section>
+
+    <form>
+    <fieldset class="formular visible">
+        <h2> Settings </h2> 
+        Pick the number of cardpairs
+        <input class="stepper" type="number" name="Stepper" step="1" min="5" max="25" value="5" />
+        <br />
+        Pick the size of thecards
+        <input class="slider" type="range" name="Slider" min="100" max="200" step="10" value="100" /> 
+        <br />
+        Pick the Backgroundcolor
+        <input class="backgroundColor" type="color" name="BackgroundColor" placeholder="grey" id="BGcolor" value="#888888">
+        <br />
+        Pick the Cardcolor
+        <input class="cardColor" type="color" name="CardColor" placeholder="grey" id="FScolor" value="#888888">
+        <br />
+        Pick the Fontcolor
+        <input class="fontColor" type="color" name="FontColor" placeholder="red" id="font-color" value="#888888">
+        <br />
+        Pick the Fontstyle
+        <input type="radio" name="RadioGroupButton" value="Times" id="radio1" />
+        <label for="radio1">Time</label>
+        <input type="radio" name="RadioGroupButton" value="Arial" id="radio2" />
+        <label for="radio2">Arial</label>
+        <input type="radio" name="RadioGroupButton" value="Calibri" id="radio3" />
+        <label for="radio3">Calibri</label>
+        <br />
+        <p></p><button type="button" class="start">Start game</button></p>
+    </fieldset>
+    </form>
+</body>
+
+</html>
