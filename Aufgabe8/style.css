@@ -1,0 +1,31 @@
+body {
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(58, 75, 68);
+    margin-left: 470px;
+
+}
+
+h1 {
+    margin-left: 70px;
+}
+
+.canvas {
+    height: 100%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+
+
+}
+.reloadButton {
+    position: absolute;
+    margin-top: -400px;
+    margin-left: 180px;
+    color: white;
+    border-color: darkgrey;
+    background-color: darkgrey;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: large;
+}
