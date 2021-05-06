@@ -1,3 +1,5 @@
+//In Zusammenarbeit mit Alessia Carbone
+
 namespace Canvas_A8 {
 
     window.addEventListener("load", startCanvas);
