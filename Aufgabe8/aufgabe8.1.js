@@ -1,4 +1,5 @@
 "use strict";
+//In Zusammenarbeit mit Alessia Carbone
 var Canvas_A8;
 (function (Canvas_A8) {
     window.addEventListener("load", startCanvas);
