@@ -12,7 +12,7 @@ var landscape;
         drawSky(0, 0, "#D37857");
         drawMountain(500, 310, "#a9a9a9");
         drawMeadow(0, 0);
-        drawSun(599, 120, "#F2CAA7", "#F2CAA7");
+        drawSun(599, 120, "#F2CAA7");
         drawCloud(50, 120, "#D3EDE5");
         drawCloud(680, 200, "#D3EDE5");
         drawCloud(530, 100, "#D3EDE5");
@@ -46,8 +46,8 @@ var landscape;
         crc2.fillStyle = gradient;
         crc2.moveTo(_x, _y);
         crc2.lineTo(_x + 1280, _y);
-        crc2.lineTo(_x + 1280, _y + 400);
-        crc2.lineTo(_x - 1280, _y + 400);
+        crc2.lineTo(_x + 1280, _y + 360);
+        crc2.lineTo(_x - 1280, _y + 360);
         crc2.closePath();
         crc2.fill();
     }
@@ -58,10 +58,10 @@ var landscape;
         gradient.addColorStop(0.6, "#7E9582");
         crc2.beginPath();
         crc2.fillStyle = gradient;
-        crc2.moveTo(_x, _y + 400); // Start von 0, 300 aus
-        crc2.lineTo(_x + 1280, _y + 400);
-        crc2.lineTo(_x + 1280, _y + 800);
-        crc2.lineTo(_x - 1280, _y + 800);
+        crc2.moveTo(_x, _y + 360);
+        crc2.lineTo(_x + 1270, _y + 360);
+        crc2.lineTo(_x + 1270, _y + 720);
+        crc2.lineTo(_x - 1270, _y + 720);
         crc2.closePath();
         crc2.fill();
     }
@@ -93,11 +93,10 @@ var landscape;
         crc2.fill();
     }
     //Funktion Sonne
-    function drawSun(_x, _y, _strokeColor, _fillColor) {
+    function drawSun(_x, _y, _fillColor) {
         //Sonne
         crc2.beginPath();
         crc2.fillStyle = _fillColor;
-        crc2.strokeStyle = _strokeColor;
         crc2.arc(450, _y, 100, 0, 5 * Math.PI);
         crc2.fill();
         crc2.closePath();
@@ -182,7 +181,7 @@ var landscape;
         //Stiel
         crc2.beginPath();
         crc2.fillStyle = "#556B2F";
-        crc2.fillRect(_x - 2, _y + 10, 4, 50); // Dritter Wert = Breite Stiel, vierter Wert = Länge
+        crc2.fillRect(_x - 2, _y + 10, 4, 50);
         //Blatt
         crc2.arc(_x + 5, _y + 20, 20, 0, -4.5);
         crc2.fill();
