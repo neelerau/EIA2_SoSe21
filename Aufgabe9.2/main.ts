@@ -6,7 +6,7 @@ namespace LandscapeClasses {
     let letters: string = "";
     let color: string = "";
     let beeArray: Bienen[] = [];
-    
+
 
     let cloudArray: Cloud[] = [];
     let xCloudArray: number[] = [];
@@ -160,7 +160,7 @@ namespace LandscapeClasses {
             crc2.closePath();
             crc2.fill();
         }
-  
+
 
 
         function drawFlower1(_x: number, _y: number): void {
@@ -224,6 +224,7 @@ namespace LandscapeClasses {
 
         function drawFlower3(_x: number, _y: number): void {
 
+            
             //Stiel
             crc2.beginPath();
 
@@ -280,8 +281,6 @@ namespace LandscapeClasses {
 
         function createBees(_nBees: number): void {
 
-
-
             for (let i: number = 0; i < _nBees; i++) {
                 let randomXBee: number = Math.random() * (crc2.canvas.width);
                 let randomYBee: number = Math.random() * (crc2.canvas.height);
@@ -299,7 +298,7 @@ namespace LandscapeClasses {
 
 
             crc2.save();
-            drawSky(0, 0, "#88d1CF");
+            drawSky(0, 0, "");
             crc2.restore();
             crc2.save();
             getRandomColor();
@@ -310,14 +309,14 @@ namespace LandscapeClasses {
             drawField(0, 0);
             crc2.restore();
             crc2.save();
-            drawSun(180, 100, "#f7fae1");
+            drawSun(180, 100, "");
             crc2.restore();
 
             crc2.save();
-            drawMountain(0, 350, "#575554");
+            drawMountain(0, 350, "");
             crc2.restore();
             crc2.save();
-            drawTrees(0, 350, "#7a2900", "#7a2900");
+            drawTrees(0, 350, "", "");
             crc2.restore();
             crc2.save();
             drawFlower1(800, 600);
@@ -329,7 +328,7 @@ namespace LandscapeClasses {
             for (var height: number = 450; height < 700; height += 1) {
 
                 var randomFlower: number = Math.floor((Math.random() * 3));
-                var width: number = Math.floor((Math.random() * 1200) + 30);
+                var width: number = Math.floor((Math.random() * 1500));
 
                 switch (randomFlower) {
                     case 0:
@@ -356,11 +355,6 @@ namespace LandscapeClasses {
 
         }
         window.setInterval(update, 150);
-
-
-
-
-
 
     }
 }

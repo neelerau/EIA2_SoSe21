@@ -219,7 +219,7 @@ var LandscapeClasses;
         function update() {
             crc2.fillRect(0, 0, crc2.canvas.width, crc2.canvas.height);
             crc2.save();
-            drawSky(0, 0, "#88d1CF");
+            drawSky(0, 0, "");
             crc2.restore();
             crc2.save();
             getRandomColor();
@@ -230,13 +230,13 @@ var LandscapeClasses;
             drawField(0, 0);
             crc2.restore();
             crc2.save();
-            drawSun(180, 100, "#f7fae1");
+            drawSun(180, 100, "");
             crc2.restore();
             crc2.save();
-            drawMountain(0, 350, "#575554");
+            drawMountain(0, 350, "");
             crc2.restore();
             crc2.save();
-            drawTrees(0, 350, "#7a2900", "#7a2900");
+            drawTrees(0, 350, "", "");
             crc2.restore();
             crc2.save();
             drawFlower1(800, 600);
@@ -244,7 +244,7 @@ var LandscapeClasses;
             drawFlower3(700, 600);
             for (var height = 450; height < 700; height += 1) {
                 var randomFlower = Math.floor((Math.random() * 3));
-                var width = Math.floor((Math.random() * 1200) + 30);
+                var width = Math.floor((Math.random() * 1500));
                 switch (randomFlower) {
                     case 0:
                         drawFlower1(width, height);
