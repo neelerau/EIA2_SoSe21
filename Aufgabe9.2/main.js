@@ -230,7 +230,7 @@ var LandscapeClasses;
             drawField(0, 0);
             crc2.restore();
             crc2.save();
-            drawSun(180, 100, "");
+            drawSun(180, 100, "#F2CAA7");
             crc2.restore();
             crc2.save();
             drawMountain(0, 350, "");
