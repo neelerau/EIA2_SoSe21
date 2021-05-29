@@ -1,14 +1,14 @@
 "use strict";
-var BlumenwieseClasses;
-(function (BlumenwieseClasses) {
+var LandscapeClasses;
+(function (LandscapeClasses) {
     class Bienen {
         constructor(_position, _velocity) {
-            this.position = new BlumenwieseClasses.Vector(0, -900);
-            this.velocity = new BlumenwieseClasses.Vector(0, 0);
+            this.position = new LandscapeClasses.Vector(0, -900);
+            this.velocity = new LandscapeClasses.Vector(0, 0);
             this.velocity.random(100, 200);
         }
         drawBees(_x, _y) {
-            let canvas = document.querySelector("#board");
+            let canvas = document.querySelector("#canvas");
             let crc2 = canvas.getContext("2d");
             crc2.save();
             crc2.translate(this.position.x, this.position.y);
@@ -20,7 +20,12 @@ var BlumenwieseClasses;
             //Streifen
             crc2.beginPath();
             crc2.fillStyle = "black";
-            crc2.ellipse(_x, _y, 15, 10, Math.PI / 2, 0, 1 * Math.PI);
+            crc2.ellipse(_x + 5, _y, 13, 8, Math.PI / 2, 0, 1 * Math.PI);
+            crc2.fill();
+            crc2.closePath();
+            crc2.beginPath();
+            crc2.fillStyle = "black";
+            crc2.ellipse(_x - 8, _y, 13, 8, Math.PI / 2, 0, 1 * Math.PI);
             crc2.fill();
             crc2.closePath();
             //Auge
@@ -35,6 +40,11 @@ var BlumenwieseClasses;
             crc2.ellipse(_x - 10, _y + -20, 10, 15, Math.PI / -5, 0, 2 * Math.PI);
             crc2.fill();
             crc2.closePath();
+            crc2.beginPath();
+            crc2.fillStyle = "#D0E5E5";
+            crc2.ellipse(_x - 3, _y + -20, 10, 15, Math.PI / -5, 0, 2 * Math.PI);
+            crc2.fill();
+            crc2.closePath();
             // Stachel Biene
             crc2.beginPath();
             crc2.fillStyle = "darkgrey";
@@ -46,9 +56,9 @@ var BlumenwieseClasses;
             crc2.restore();
         }
         move(_timeslice) {
-            let canvas = document.querySelector("#board");
+            let canvas = document.querySelector("#canvas");
             let crc2 = canvas.getContext("2d");
-            let offset = new BlumenwieseClasses.Vector(this.velocity.x, this.velocity.y);
+            let offset = new LandscapeClasses.Vector(this.velocity.x, this.velocity.y);
             offset.scale(_timeslice);
             this.position.add(offset);
             if (this.position.x < 0)
@@ -61,6 +71,6 @@ var BlumenwieseClasses;
                 this.position.y -= crc2.canvas.height;
         }
     }
-    BlumenwieseClasses.Bienen = Bienen;
-})(BlumenwieseClasses || (BlumenwieseClasses = {}));
+    LandscapeClasses.Bienen = Bienen;
+})(LandscapeClasses || (LandscapeClasses = {}));
 //# sourceMappingURL=bee.js.map

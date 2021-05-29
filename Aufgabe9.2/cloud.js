@@ -1,6 +1,6 @@
 "use strict";
-var BlumenwieseClasses;
-(function (BlumenwieseClasses) {
+var LandscapeClasses;
+(function (LandscapeClasses) {
     class Cloud {
         constructor(_position, _size, _velocity, _x, _y) {
             this.position = _position;
@@ -10,7 +10,7 @@ var BlumenwieseClasses;
             this.y = _y;
         }
         drawCloud() {
-            let canvas = document.querySelector("#board");
+            let canvas = document.querySelector("#canvas");
             let crc2 = canvas.getContext("2d");
             let particleNumber = 23;
             let particleRadius = 30;
@@ -22,7 +22,7 @@ var BlumenwieseClasses;
             particle.arc(-10, -30, particleRadius, 0, 2 * Math.PI);
             particle.arc(40, -20, 30, 0, 2 * Math.PI);
             particle.arc(40, 20, 30, 0, 2 * Math.PI);
-            particle.arc(40, -5, 30, 0, 2 * Math.PI);
+            particle.arc(40, -20, 30, 0, 2 * Math.PI);
             crc2.fillStyle = gradient;
             crc2.fill();
             crc2.closePath();
@@ -38,9 +38,9 @@ var BlumenwieseClasses;
             crc2.restore();
         }
         move(_timeslice) {
-            let canvas = document.querySelector("#board");
+            let canvas = document.querySelector("#canvas");
             let crc2 = canvas.getContext("2d");
-            let offset = new BlumenwieseClasses.Vector(this.velocity.x, this.velocity.y);
+            let offset = new LandscapeClasses.Vector(this.velocity.x, this.velocity.y);
             offset.scale(_timeslice);
             this.position.add(offset);
             if (this.position.x < 0)
@@ -53,6 +53,6 @@ var BlumenwieseClasses;
                 this.position.y -= crc2.canvas.height;
         }
     }
-    BlumenwieseClasses.Cloud = Cloud;
-})(BlumenwieseClasses || (BlumenwieseClasses = {}));
+    LandscapeClasses.Cloud = Cloud;
+})(LandscapeClasses || (LandscapeClasses = {}));
 //# sourceMappingURL=cloud.js.map

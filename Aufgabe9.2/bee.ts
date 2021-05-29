@@ -1,4 +1,4 @@
-namespace BlumenwieseClasses {
+namespace LandscapeClasses {
     export class Bienen {
         position: Vector;
         velocity: Vector;
@@ -10,7 +10,7 @@ namespace BlumenwieseClasses {
         }
 
    drawBees(_x: number, _y: number): void {
-       let canvas: HTMLCanvasElement = <HTMLCanvasElement> document.querySelector("#board");
+       let canvas: HTMLCanvasElement = <HTMLCanvasElement> document.querySelector("#canvas");
        let crc2: CanvasRenderingContext2D = <CanvasRenderingContext2D> canvas.getContext("2d");
        crc2.save();
        crc2.translate(this.position.x, this.position.y);
@@ -25,7 +25,14 @@ namespace BlumenwieseClasses {
        //Streifen
        crc2.beginPath();
        crc2.fillStyle = "black";
-       crc2.ellipse(_x , _y , 15, 10, Math.PI / 2, 0, 1 * Math.PI);
+       crc2.ellipse(_x + 5, _y , 13, 8, Math.PI / 2, 0, 1 * Math.PI);
+
+       crc2.fill();
+       crc2.closePath(); 
+
+       crc2.beginPath();
+       crc2.fillStyle = "black";
+       crc2.ellipse(_x - 8 , _y , 13, 8, Math.PI / 2, 0, 1 * Math.PI);
 
        crc2.fill();
        crc2.closePath(); 
@@ -47,6 +54,13 @@ namespace BlumenwieseClasses {
        crc2.fill();
        crc2.closePath();
 
+       crc2.beginPath();
+       crc2.fillStyle = "#D0E5E5";
+       crc2.ellipse(_x - 3, _y + -20, 10, 15, Math.PI / -5, 0, 2 * Math.PI);
+       crc2.fill();
+       crc2.closePath();
+
+
            // Stachel Biene
        crc2.beginPath();
        crc2.fillStyle = "darkgrey";
@@ -60,7 +74,7 @@ namespace BlumenwieseClasses {
        }
 
        move(_timeslice: number): void {
-       let canvas: HTMLCanvasElement = <HTMLCanvasElement> document.querySelector("#board");
+       let canvas: HTMLCanvasElement = <HTMLCanvasElement> document.querySelector("#canvas");
        let crc2: CanvasRenderingContext2D = <CanvasRenderingContext2D> canvas.getContext("2d");
        
        let offset: Vector = new Vector(this.velocity.x, this.velocity.y);

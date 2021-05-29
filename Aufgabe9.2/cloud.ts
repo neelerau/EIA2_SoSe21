@@ -1,4 +1,4 @@
-namespace BlumenwieseClasses {
+namespace LandscapeClasses {
     export class Cloud {
         position: Vector;
         velocity: Vector;
@@ -15,7 +15,7 @@ namespace BlumenwieseClasses {
             
         }
         drawCloud(): void {
-            let canvas: HTMLCanvasElement = <HTMLCanvasElement> document.querySelector("#board");
+            let canvas: HTMLCanvasElement = <HTMLCanvasElement> document.querySelector("#canvas");
             let crc2: CanvasRenderingContext2D = <CanvasRenderingContext2D> canvas.getContext("2d");
             let particleNumber: number = 23;
             let particleRadius: number = 30;
@@ -27,7 +27,7 @@ namespace BlumenwieseClasses {
             particle.arc(-10, -30, particleRadius, 0,  2 * Math.PI);
             particle.arc(40, -20, 30, 0,  2 * Math.PI);
             particle.arc(40, 20, 30, 0,  2 * Math.PI);
-            particle.arc(40, -5, 30, 0,  2 * Math.PI);
+            particle.arc(40, -20, 30, 0,  2 * Math.PI);
             crc2.fillStyle = gradient;
             crc2.fill();
             crc2.closePath();
@@ -48,7 +48,7 @@ namespace BlumenwieseClasses {
             crc2.restore();
         }
         move(_timeslice: number): void {
-            let canvas: HTMLCanvasElement = <HTMLCanvasElement> document.querySelector("#board");
+            let canvas: HTMLCanvasElement = <HTMLCanvasElement> document.querySelector("#canvas");
             let crc2: CanvasRenderingContext2D = <CanvasRenderingContext2D> canvas.getContext("2d");
             
             let offset: Vector = new Vector(this.velocity.x, this.velocity.y);

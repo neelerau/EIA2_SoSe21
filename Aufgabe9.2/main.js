@@ -1,7 +1,7 @@
 "use strict";
 //Zusammenarbeit mit Alessia Carbone und inspiriert bei Lukas Muschal
-var BlumenwieseClasses;
-(function (BlumenwieseClasses) {
+var LandscapeClasses;
+(function (LandscapeClasses) {
     window.addEventListener("load", handleLoad);
     let letters = "";
     let color = "";
@@ -9,14 +9,13 @@ var BlumenwieseClasses;
     let cloudArray = [];
     let xCloudArray = [];
     let yCloudArray = [];
-    let cloudSize = new BlumenwieseClasses.Vector(10, 5);
+    let cloudSize = new LandscapeClasses.Vector(10, 5);
     function handleLoad(_event) {
-        let canvas = document.querySelector("#board");
+        let canvas = document.querySelector("#canvas");
         let crc2 = canvas.getContext("2d");
         createCloud();
         createCloudxy(20, cloudSize);
-        createBees(10);
-        createFlowers();
+        createBees(15);
         function getRandomColor() {
             letters = "0123456789ABCDEF";
             color = "#";
@@ -198,41 +197,23 @@ var BlumenwieseClasses;
         function createCloud() {
             let xCloud = 0;
             let yCloud = 150;
-            let cloudPosition = new BlumenwieseClasses.Vector(xCloud, yCloud);
-            let cloudSize = new BlumenwieseClasses.Vector(100, 50);
-            let velocityCloud = new BlumenwieseClasses.Vector(4, 0);
+            let cloudPosition = new LandscapeClasses.Vector(xCloud, yCloud);
+            let cloudSize = new LandscapeClasses.Vector(100, 50);
+            let velocityCloud = new LandscapeClasses.Vector(4, 0);
             for (let i = 0; i < 20; i++) {
-                let cloud = new BlumenwieseClasses.Cloud(cloudPosition, cloudSize, velocityCloud, xCloudArray[i], yCloudArray[i]);
+                let cloud = new LandscapeClasses.Cloud(cloudPosition, cloudSize, velocityCloud, xCloudArray[i], yCloudArray[i]);
                 cloud.drawCloud();
                 cloudArray.push(cloud);
             }
         }
         function createBees(_nBees) {
-            console.log("Create Bees");
             for (let i = 0; i < _nBees; i++) {
                 let randomXBee = Math.random() * (crc2.canvas.width);
                 let randomYBee = Math.random() * (crc2.canvas.height);
-                let beePosition = new BlumenwieseClasses.Vector(randomXBee, randomYBee);
-                let beeVelocity = new BlumenwieseClasses.Vector(20, 0);
-                let bee = new BlumenwieseClasses.Bienen(beePosition, beeVelocity);
+                let beePosition = new LandscapeClasses.Vector(randomXBee, randomYBee);
+                let beeVelocity = new LandscapeClasses.Vector(20, 0);
+                let bee = new LandscapeClasses.Bienen(beePosition, beeVelocity);
                 beeArray.push(bee);
-            }
-        }
-        function createFlowers() {
-            for (var height = 450; height < 700; height += 2) {
-                var randomFlower = Math.floor((Math.random() * 3));
-                var width = Math.floor((Math.random() * 1200) + 30);
-                switch (randomFlower) {
-                    case 0:
-                        drawFlower1(width, height);
-                        break;
-                    case 1:
-                        drawFlower2(width, height);
-                        break;
-                    case 2:
-                        drawFlower3(width, height);
-                        break;
-                }
             }
         }
         function update() {
@@ -258,10 +239,10 @@ var BlumenwieseClasses;
             drawTrees(0, 350, "#7a2900", "#7a2900");
             crc2.restore();
             crc2.save();
-            drawFlower1(600, 450);
-            drawFlower2(500, 550);
-            drawFlower3(700, 400);
-            for (var height = 450; height < 700; height += 2) {
+            drawFlower1(800, 600);
+            drawFlower2(600, 600);
+            drawFlower3(700, 600);
+            for (var height = 450; height < 700; height += 1) {
                 var randomFlower = Math.floor((Math.random() * 3));
                 var width = Math.floor((Math.random() * 1200) + 30);
                 switch (randomFlower) {
@@ -287,5 +268,5 @@ var BlumenwieseClasses;
         }
         window.setInterval(update, 150);
     }
-})(BlumenwieseClasses || (BlumenwieseClasses = {}));
+})(LandscapeClasses || (LandscapeClasses = {}));
 //# sourceMappingURL=main.js.map

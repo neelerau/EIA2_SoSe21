@@ -1,11 +1,12 @@
 //Zusammenarbeit mit Alessia Carbone und inspiriert bei Lukas Muschal
 
-namespace BlumenwieseClasses {
+namespace LandscapeClasses {
     window.addEventListener("load", handleLoad);
     export let crc2: CanvasRenderingContext2D;
     let letters: string = "";
     let color: string = "";
     let beeArray: Bienen[] = [];
+    
 
     let cloudArray: Cloud[] = [];
     let xCloudArray: number[] = [];
@@ -14,14 +15,14 @@ namespace BlumenwieseClasses {
 
 
     function handleLoad(_event: Event): void {
-        let canvas: HTMLCanvasElement = <HTMLCanvasElement>document.querySelector("#board");
+        let canvas: HTMLCanvasElement = <HTMLCanvasElement>document.querySelector("#canvas");
         let crc2: CanvasRenderingContext2D = <CanvasRenderingContext2D>canvas.getContext("2d");
 
 
         createCloud();
         createCloudxy(20, cloudSize);
-        createBees(10);
-        createFlowers();
+        createBees(15);
+
 
         function getRandomColor(): string {
             letters = "0123456789ABCDEF";
@@ -159,6 +160,8 @@ namespace BlumenwieseClasses {
             crc2.closePath();
             crc2.fill();
         }
+  
+
 
         function drawFlower1(_x: number, _y: number): void {
 
@@ -276,7 +279,7 @@ namespace BlumenwieseClasses {
         }
 
         function createBees(_nBees: number): void {
-            console.log("Create Bees");
+
 
 
             for (let i: number = 0; i < _nBees; i++) {
@@ -290,26 +293,6 @@ namespace BlumenwieseClasses {
             }
         }
 
-        function createFlowers(): void {
-
-            for (var height: number = 450; height < 700; height += 2) {
-
-                var randomFlower: number = Math.floor((Math.random() * 3));
-                var width: number = Math.floor((Math.random() * 1200) + 30);
-
-                switch (randomFlower) {
-                    case 0:
-                        drawFlower1(width, height);
-                        break;
-                    case 1:
-                        drawFlower2(width, height);
-                        break;
-                    case 2:
-                        drawFlower3(width, height);
-                        break;
-                }
-            }
-        }
 
         function update(): void {
             crc2.fillRect(0, 0, crc2.canvas.width, crc2.canvas.height);
@@ -337,13 +320,13 @@ namespace BlumenwieseClasses {
             drawTrees(0, 350, "#7a2900", "#7a2900");
             crc2.restore();
             crc2.save();
-            drawFlower1(600, 450);
-            drawFlower2(500, 550);
-            drawFlower3(700, 400);
+            drawFlower1(800, 600);
+            drawFlower2(600, 600);
+            drawFlower3(700, 600);
 
 
 
-            for (var height: number = 450; height < 700; height += 2) {
+            for (var height: number = 450; height < 700; height += 1) {
 
                 var randomFlower: number = Math.floor((Math.random() * 3));
                 var width: number = Math.floor((Math.random() * 1200) + 30);

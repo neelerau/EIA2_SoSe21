@@ -1,4 +1,4 @@
-namespace BlumenwieseClasses {
+namespace LandscapeClasses {
     export class Vector {
         x: number;
         y: number;
