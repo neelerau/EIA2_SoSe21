@@ -7,7 +7,6 @@ namespace LandscapeClasses {
     let color: string = "";
     let beeArray: Bienen[] = [];
 
-
     let cloudArray: Cloud[] = [];
     let xCloudArray: number[] = [];
     let yCloudArray: number[] = [];
