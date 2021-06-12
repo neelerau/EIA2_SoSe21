@@ -166,7 +166,6 @@ namespace LandscapePolymorphie {
 
         crc2.fillRect(800, 335, 25, 110);
 
-
         //Baumkrone1
         crc2.beginPath();
         crc2.fillStyle = "#597459";
