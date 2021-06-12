@@ -1,4 +1,5 @@
 "use strict";
+//Zusammenarbeit mit Alessia Carbone und Aileen Akin
 var LandscapePolymorphie;
 (function (LandscapePolymorphie) {
     window.addEventListener("load", handleLoad);

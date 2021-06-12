@@ -1,5 +1,6 @@
-namespace LandscapePolymorphie { 
+//Zusammenarbeit mit Alessia Carbone und Aileen Akin
 
+namespace LandscapePolymorphie { 
 
     window.addEventListener("load", handleLoad);
 
