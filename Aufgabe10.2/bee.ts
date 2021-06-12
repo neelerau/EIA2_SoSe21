@@ -57,7 +57,7 @@ namespace LandscapePolymorphie {
             crc2.closePath();
       
      
-                //Flügel Biene
+            //Flügel Biene
             crc2.beginPath();
             crc2.fillStyle = "#D0E5E5";
             crc2.ellipse(this.position.x - 10, this.position.y + -20, 10, 15, Math.PI / -5, 0, 2 * Math.PI);
@@ -82,6 +82,4 @@ namespace LandscapePolymorphie {
             crc2.restore();
         }
     }
-
-
 }
