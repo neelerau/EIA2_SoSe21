@@ -26,7 +26,7 @@ namespace Landscape11 {
 
         createFlower();
         drawFlower();
-        drawBeehouse()
+        drawBeehouse();
 
         drawTrees(1, 1, "", "");
         drawSun(1, 1, "#F2CAA7");
@@ -261,7 +261,7 @@ namespace Landscape11 {
             let bar: HTMLElement = <HTMLElement>document.querySelector("#bar");
             let width: number = 1;
             let percent: number  = setInterval(frame, 150);
-            
+
             function frame(): void {
                 if (width >= 100) {
                     clearInterval(percent);
