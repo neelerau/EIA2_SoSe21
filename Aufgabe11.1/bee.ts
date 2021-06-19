@@ -1,8 +1,8 @@
-namespace LandscapePolymorphie {
+namespace Landscape11 {
 
     export class Bee extends Moveable {
-        position: Vector;
-        velocity: Vector;
+        protected position: Vector;
+        protected velocity: Vector;
 
 
         constructor (_position?: Vector) { 
@@ -16,10 +16,10 @@ namespace LandscapePolymorphie {
                 
 
             this.velocity = new Vector(1000, 0); 
-            this.velocity.random(120, 20); 
+            this.velocity = Vector.random(150, 50);
         }
 
-        draw(): void {
+        public draw(): void {
             let canvas: HTMLCanvasElement = <HTMLCanvasElement> document.querySelector("#canvas");
             let crc2: CanvasRenderingContext2D = <CanvasRenderingContext2D> canvas.getContext("2d");
             crc2.save();
