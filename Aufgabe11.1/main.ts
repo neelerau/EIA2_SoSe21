@@ -261,6 +261,7 @@ namespace Landscape11 {
             let bar: HTMLElement = <HTMLElement>document.querySelector("#bar");
             let width: number = 1;
             let percent: number  = setInterval(frame, 150);
+            
             function frame(): void {
                 if (width >= 100) {
                     clearInterval(percent);
